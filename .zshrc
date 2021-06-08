@@ -32,7 +32,6 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 #============== ALIASSES
-alias ls="ls --color=auto"
 #=======================
 
 # prompt collors
@@ -68,17 +67,9 @@ source /home/ssd/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #============== ALIASSES
 source ~/.myrcs/.aliasrc
-alias history="history 0"   #show complete history
 
-alias tt="vim ~/.myrcs/.tmuxrc"
 
-# Or if we are using an alternate Tmux config location
-alias tn="tmux -u -f ~/.myrcs/.tmuxrc new"
-alias ta="tmux -u -f ~/.myrcs/.tmuxrc attach"
 
-#node 16 to support "??" sintax
-alias node="/home/ssd/.nvm/versions/node/v16.2.0/bin/node"
-alias gatsby="/home/ssd/.nvm/versions/node/v16.2.0/bin/gatsby"
 
 #=============================== from kali zshrc========
 # enable auto-suggestions based on the history

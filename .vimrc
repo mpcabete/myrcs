@@ -38,12 +38,13 @@ set foldcolumn=1 "left margin
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin('~/.vim/plugged')
-" Plug 'adrian5/oceanic-next-vim'
+Plug 'adrian5/oceanic-next-vim'
 Plug 'vimwiki/vimwiki'
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'jelera/vim-javascript-syntax'
+"Plug 'jelera/vim-javascript-syntax'
+Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 

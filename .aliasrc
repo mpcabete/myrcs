@@ -1,3 +1,16 @@
 alias vv="vim ~/.myrcs/.vimrc"
 alias zz="vim ~/.myrcs/.zshrc"
 alias tt="vim ~/.myrcs/.tmuxrc"
+
+# tmux rc source and alias
+alias tn="tmux -u -f ~/.myrcs/.tmuxrc new"
+alias ta="tmux -u -f ~/.myrcs/.tmuxrc attach"
+
+alias ls="ls --color=auto"
+#alias cd="cd $1 && ls"
+alias history="history 0"   #show complete history
+
+#node 16 from nvm
+#TODO: add to path instead
+alias node="/home/ssd/.nvm/versions/node/v16.2.0/bin/node"
+alias gatsby="/home/ssd/.nvm/versions/node/v16.2.0/bin/gatsby"

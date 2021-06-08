@@ -20,5 +20,11 @@ set-option -g pane-border-style fg="#00BEBE"
 
 set -g default-terminal "screen-256color"
 
+# Open new panes and window in cwd
+
+bind '"' split-window -c "#{pane_current_path}"
+bind % split-window -h -c "#{pane_current_path}"
+bind c new-window -c "#{pane_current_path}"
+
 # I typically don't like to see a Status Bar
 #set-option -g status off
