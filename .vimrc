@@ -1,4 +1,5 @@
 
+
 " mudar leader n pra toggle
 " nome do arquivo em algum lugar da tela
 " tab no normal?
@@ -11,6 +12,9 @@
 " targets.vim
 " custom text objects
 " nerd commenter
+"https://github.com/vim-airline/vim-airline
+"https://github.com/Yggdroot/indentLine
+"ctr P
 source $VIMRUNTIME/defaults.vim
 syntax on 
 filetype plugin on
@@ -20,8 +24,8 @@ set nocompatible
 set noerrorbells
 set belloff=all
 set tabstop=2 softtabstop=2
-set shiftwidth=2
 set expandtab
+set shiftwidth=2
 set smartindent
 set nu
 set nowrap
@@ -31,6 +35,8 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
+set ignorecase
+set smartcase
 set cul
 set so=7 "lines to scroll up and down
 set foldcolumn=1 "left margin
@@ -41,6 +47,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'adrian5/oceanic-next-vim'
 Plug 'vimwiki/vimwiki'
 Plug 'morhetz/gruvbox'
+Plug 'godlygeek/tabular'
 Plug 'preservim/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'jelera/vim-javascript-syntax'
@@ -56,6 +63,9 @@ set background=dark
 " fallback to show errors highlight in tsserver
 let g:gruvbox_guisp_fallback = 'bg'
 "colorscheme oceanicnext
+
+"transparency
+hi Normal guibg=NONE ctermbg=NONE
 
 let mapleader = " "
 noremap <Space> <NOP>
