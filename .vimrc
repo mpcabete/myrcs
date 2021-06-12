@@ -40,7 +40,7 @@ set smartcase
 set cul
 set so=7 "lines to scroll up and down
 set foldcolumn=1 "left margin
-
+set clipboard=unnamedplus
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin('~/.vim/plugged')
@@ -51,6 +51,7 @@ Plug 'godlygeek/tabular'
 Plug 'preservim/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'jelera/vim-javascript-syntax'
+Plug 'rafi/awesome-vim-colorschemes'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'

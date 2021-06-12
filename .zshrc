@@ -10,7 +10,7 @@ zstyle ':completion:*' group-name ''
 zstyle ':completion:*' ignore-parents pwd ..
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}'
 zstyle ':completion:*' use-compctl true
-zstyle :compinstall filename '/home/ssd/.zshrc'
+zstyle :compinstall filename '/home/mp/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -34,7 +34,7 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 #============== ALIASSES
 #=======================
-
+export TERM=xterm-256color
 # prompt collors
 autoload -U colors && colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
@@ -64,7 +64,7 @@ export KEYTIMEOUT=1
 #preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 #
 
-source /home/ssd/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #============== ALIASSES
 source ~/.myrcs/.aliasrc
@@ -73,10 +73,8 @@ source ~/.myrcs/.aliasrc
 
 
 #=============================== from kali zshrc========
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # enable auto-suggestions based on the history
-if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
-    . /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
     # change suggestion color
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
-fi
 
