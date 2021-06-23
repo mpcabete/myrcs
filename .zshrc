@@ -1,6 +1,8 @@
 # The following lines were added by compinstall
 # colocar duplicatas no historico
 
+export PATH=$PATH:$HOME/scripts
+
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _complete _ignored _approximate
 zstyle ':completion:*' expand suffix

@@ -1,18 +1,34 @@
+alias fucking=sudo
+
 alias vv="vim ~/.myrcs/.vimrc"
 alias zz="vim ~/.myrcs/.zshrc"
 alias tt="vim ~/.myrcs/.tmuxrc"
+alias aa="vim ~/.myrcs/.aliasrc"
+alias qq="vim ~/.config/qtile/config.py"
+
 
 # tmux rc source and alias
 alias tn="tmux -u -f ~/.myrcs/.tmuxrc new"
 alias ta="tmux -u -f ~/.myrcs/.tmuxrc attach"
 
-alias ls="ls --color=auto"
-#alias cd="cd $1 && ls"
+#alias ls="ls --color=auto"
+alias ls='exa -lgs modified --group-directories-first'
+
+alias l='exa --group-directories-first'
+alias ll='exa -lg --group-directories-first'
+alias la='exa -lag --group-directories-first'
+alias lmr='exa -lgs modified --group-directories-first --reverse'
+
+#alias cd="cd $1;lm"
+#alias into a temporary dir
+alias cdt='cd $(mktemp -d)'
+
 alias history="history 0"   #show complete history
+alias h='history|grep'
 
 #node 16 from nvm
 #TODO: add to path instead
-alias node="/home/ssd/.nvm/versions/node/v16.2.0/bin/node"
+#alias node="/home/ssd/.nvm/versions/node/v16.2.0/bin/node"
 alias gatsby="/home/ssd/.nvm/versions/node/v16.2.0/bin/gatsby"
 
 #background image
