@@ -29,7 +29,7 @@ alias h='history|grep'
 #node 16 from nvm
 #TODO: add to path instead
 #alias node="/home/ssd/.nvm/versions/node/v16.2.0/bin/node"
-alias gatsby="/home/ssd/.nvm/versions/node/v16.2.0/bin/gatsby"
+#alias gatsby="/home/ssd/.nvm/versions/node/v16.2.0/bin/gatsby"
 
 #background image
 alias setbg="feh --bg-scale $1"

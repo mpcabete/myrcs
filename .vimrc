@@ -55,6 +55,7 @@ Plug 'rafi/awesome-vim-colorschemes'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'jbmorgado/vim-pine-script'
 
 call plug#end()
 
@@ -115,7 +116,7 @@ nnoremap <C-f> :NERDTreeFind<CR>
 vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 
-let g:coc_global_extensions = [ 'coc-json', 'coc-eslint', 'coc-css', 'coc-html', 'coc-sh', 'coc-python', 'coc-graphql', 'coc-prettier', 'coc-tsserver', 'coc-markdownlint' ]
+let g:coc_global_extensions = [ 'coc-json', 'coc-eslint', 'coc-css', 'coc-html', 'coc-sh', 'coc-python', 'coc-prettier', 'coc-tsserver', 'coc-markdownlint' ]
 
 
 " if it is a text file, add line breaks at 78 chars

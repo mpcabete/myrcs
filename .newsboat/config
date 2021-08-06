@@ -25,7 +25,8 @@ prepopulate-query-feeds yes
 
 # -- navigation ----------------------------------------------------------------
 
-browser firefox --new-tab %u
+#browser firefox --new-tab %u
+browser brave
 
 bind-key j down feedlist
 bind-key k up feedlist
