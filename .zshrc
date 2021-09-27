@@ -69,7 +69,7 @@ export KEYTIMEOUT=1
 source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #============== ALIASSES
-source ~/.myrcs/.aliasrc
+source ~/myrcs/.aliasrc
 
 
 

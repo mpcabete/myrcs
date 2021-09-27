@@ -1,9 +1,9 @@
 alias fucking=sudo
 
-alias vv="vim ~/.myrcs/.vimrc"
-alias zz="vim ~/.myrcs/.zshrc"
-alias tt="vim ~/.myrcs/.tmuxrc"
-alias aa="vim ~/.myrcs/.aliasrc"
+alias vv="vim ~/myrcs/.vimrc"
+alias zz="vim ~/myrcs/.zshrc"
+alias tt="vim ~/myrcs/.tmuxrc"
+alias aa="vim ~/myrcs/.aliasrc"
 alias qq="vim ~/.config/qtile/config.py"
 
 
