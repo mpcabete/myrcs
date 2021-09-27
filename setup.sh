@@ -9,4 +9,5 @@ then
 
 fi
 
-
+xmodmap ./.Xmodmap
+cp ./.Xmodmap ~/.Xmodmap
