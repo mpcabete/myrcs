@@ -1,0 +1,6 @@
+
+keycode 66 = Escape
+clear Lock
+
+keycode 92 = Super_L
+remove mod1 = Super_L
