@@ -13,7 +13,6 @@ zstyle ':completion:*' ignore-parents pwd ..
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}'
 zstyle ':completion:*' use-compctl true
 zstyle :compinstall filename '/home/mp/.zshrc'
-
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
@@ -21,6 +20,7 @@ compinit
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000000
+setopt share_history
 setopt autocd extendedglob notify
 bindkey -v
 # End of lines configured by zsh-newuser-install
@@ -80,3 +80,4 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
     # change suggestion color
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
 
+neofetch
