@@ -9,6 +9,7 @@ then
 
 fi
 
+echo "if on ubuntu disto manually add bind-caps.sh to startup scripts"
 # print current keymap table 
 xmodmap -pke > ~/.Xmodmap;
 # append capslock bind
