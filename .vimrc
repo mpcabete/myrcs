@@ -56,6 +56,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'jbmorgado/vim-pine-script'
+Plug 'preservim/nerdcommenter'
 
 call plug#end()
 
