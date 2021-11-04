@@ -1,5 +1,7 @@
 alias fucking=sudo
 
+alias reverssh="ssh -i ~/.ssh/aws.pem -R 8008:localhost:22 mp@mpcabete.xyz"
+
 alias vv="vim ~/myrcs/.vimrc"
 alias zz="vim ~/myrcs/.zshrc"
 alias tt="vim ~/myrcs/.tmuxrc"
@@ -33,3 +35,7 @@ alias h='history|grep'
 
 #background image
 alias setbg="feh --bg-scale $1"
+
+#stupid
+alias castle="curl https://raw.githubusercontent.com/imsnif/terminal-anatomy-code-examples/main/raw_castle_ansi/castle"
+alias parrot="curl parrot.live"

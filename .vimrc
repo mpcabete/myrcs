@@ -38,7 +38,7 @@ set incsearch
 set ignorecase
 set smartcase
 set cul
-set so=7 "lines to scroll up and down
+set so=4 "lines to scroll up and down
 set foldcolumn=1 "left margin
 set clipboard=unnamedplus
 highlight ColorColumn ctermbg=0 guibg=lightgrey
@@ -117,7 +117,7 @@ nnoremap <C-f> :NERDTreeFind<CR>
 vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 
-let g:coc_global_extensions = [ 'coc-json', 'coc-eslint', 'coc-css', 'coc-html', 'coc-sh', 'coc-python', 'coc-prettier', 'coc-tsserver', 'coc-markdownlint' ]
+let g:coc_global_extensions = [ 'coc-yaml', 'coc-json', 'coc-eslint', 'coc-css', 'coc-html', 'coc-sh', 'coc-python', 'coc-prettier', 'coc-tsserver', 'coc-markdownlint' ]
 
 
 " if it is a text file, add line breaks at 78 chars

@@ -1,5 +1,1 @@
-zsh
-exa
-git
-neofetch
-
+command-not-found
