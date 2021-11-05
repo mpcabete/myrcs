@@ -30,3 +30,4 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosugges
 # set default as zsh
 chsh -s $(which zsh)
 
+xargs -a dependencies.txt sudo apt install -y
