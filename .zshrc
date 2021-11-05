@@ -67,6 +67,7 @@ export KEYTIMEOUT=1
 #
 
 source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /etc/zsh_command_not_found
 
 #============== ALIASSES
 source ~/myrcs/.aliasrc
