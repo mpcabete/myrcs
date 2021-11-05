@@ -6,6 +6,8 @@ alias tt="vim ~/myrcs/.tmuxrc"
 alias aa="vim ~/myrcs/.aliasrc"
 alias qq="vim ~/.config/qtile/config.py"
 
+alias note='nano "$HOME/journal/$(date).txt"'
+
 
 # tmux rc source and alias
 alias tn="tmux -u -f ~/.myrcs/.tmuxrc new"
