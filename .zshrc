@@ -1,7 +1,7 @@
 # The following lines were added by compinstall
 # colocar duplicatas no historico
 
-export PATH=$PATH:$HOME/scripts
+export PATH=$PATH:$HOME/myrcs/scripts
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _complete _ignored _approximate
