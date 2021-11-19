@@ -1,6 +1,12 @@
 # The following lines were added by compinstall
 # colocar duplicatas no historico
 
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git svn
+precmd() {
+    vcs_info
+}
+
 export PATH=$PATH:$HOME/myrcs/scripts
 
 zstyle ':completion:*' auto-description 'specify: %d'
@@ -39,7 +45,13 @@ bindkey -v '^?' backward-delete-char
 export TERM=xterm-256color
 # prompt collors
 autoload -U colors && colors
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+#PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+setopt prompt_subst
+
+#zstyle ':vcs_info:git*' formats "%{$fg[grey]%}%s %{$reset_color%}%r/%S%{$fg[grey]%} %{$fg[blue]%}%b%{$reset_color%}%m%u%c%{$reset_color%} "
+zstyle ':vcs_info:git*' formats "(%b)"
+PROMPT='%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$fg[cyan]%}${vcs_info_msg_0_}%{$reset_color%}$%b'
+#PROMPT=''
 
 # improtant for vi mode for some reason
 export KEYTIMEOUT=1

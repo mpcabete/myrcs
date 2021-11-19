@@ -29,6 +29,7 @@ alias cdt='cd $(mktemp -d)'
 
 alias history="history 0"   #show complete history
 alias h='history|grep'
+alias mine="java -jar ~/mine/shiginima-launcher-se.v4300.jar "
 
 #node 16 from nvm
 #TODO: add to path instead

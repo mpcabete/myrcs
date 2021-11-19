@@ -1,3 +1,6 @@
 #! /bin/bash
 
 rsync -vhPa --append-verify -e ssh $1 mp@mpcabete.xyz:/var/www/html/files
+
+# copy to clipboard
+echo "https://mpcabete.xyz/files/$1" | xclip -selection clipboard
