@@ -84,10 +84,6 @@ inoremap <Left> <Nop>
 inoremap <Right> <Nop>
 inoremap jj <Esc>
 
-vnoremap <Up> <Nop>
-vnoremap <Down> <Nop>
-vnoremap <Left> <Nop>
-vnoremap <Right> <Nop>
 
 " Fast saving
 nmap <leader>w :w!<cr>
