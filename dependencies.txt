@@ -3,3 +3,4 @@ exa
 git
 neofetch
 command-not-found
+bat
