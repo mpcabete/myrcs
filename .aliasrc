@@ -8,7 +8,7 @@ alias tt="vim ~/myrcs/.tmuxrc"
 alias aa="vim ~/myrcs/.aliasrc"
 alias qq="vim ~/.config/qtile/config.py"
 
-alias date='date +"%d/%m/%g - %H:%M"'
+alias date='date +"%d-%m-%g - %H:%M"'
 alias note='nano "$HOME/journal/$(date).txt"'
 
 
