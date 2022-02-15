@@ -44,6 +44,15 @@ set clipboard=unnamedplus
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin('~/.vim/plugged')
+" ------- curso de haskell: youtube.com/watch?v=v0yExSZ6fzQ
+" utilizaçao de lints
+Plug 'w0rp/ale'
+" sugestao feita pelo lint pode ser exacutada automaticamente
+Plug 'mpickering/hlint-refactor-vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'raichoo/haskell-vim'
+Plug 'vim-scripts/indentpython.vim'
+" -------
 Plug 'adrian5/oceanic-next-vim'
 Plug 'vimwiki/vimwiki'
 Plug 'morhetz/gruvbox'
@@ -60,6 +69,16 @@ Plug 'preservim/nerdcommenter'
 
 call plug#end()
 
+" ------- curso de haskell: youtube.com/watch?v=v0yExSZ6fzQ
+let g:ale_fixers = {
+    \ 'javascript':['esling'],
+    \ 'haskell':['hlint'],
+    \ 'python':['autopep8'],
+    \ }
+
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+" -------
 colorscheme gruvbox
 set background=dark
 

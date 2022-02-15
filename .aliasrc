@@ -24,6 +24,10 @@ alias ll='exa -lg --group-directories-first'
 alias la='exa -lag --group-directories-first'
 alias lmr='exa -lgs modified --group-directories-first --reverse'
 
+alias rm='trash'
+
+alias cat="batcat"
+
 #alias cd="cd $1;lm"
 #alias into a temporary dir
 alias cdt='cd $(mktemp -d)'
