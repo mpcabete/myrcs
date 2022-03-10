@@ -4,7 +4,7 @@ alias reverssh="ssh -i ~/.ssh/aws.pem -R 8008:localhost:22 mp@mpcabete.xyz"
 
 alias vv="vim ~/myrcs/.vimrc"
 alias zz="vim ~/myrcs/.zshrc"
-alias tt="vim ~/myrcs/.tmuxrc"
+alias tt="vim ~/myrcs/.tmux.conf"
 alias aa="vim ~/myrcs/.aliasrc"
 alias qq="vim ~/.config/qtile/config.py"
 
