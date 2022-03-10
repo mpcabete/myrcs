@@ -7,7 +7,7 @@ precmd() {
     vcs_info
 }
 
-#export PATH=$PATH:$HOME/myrcs/scripts
+export PATH=$PATH:$HOME/myrcs/scripts
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _complete _ignored _approximate
