@@ -32,9 +32,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosugges
 # set default as zsh
 chsh -s $(which zsh)
 
-xargs -a dependencies.txt sudo apt install -y
-ln -s $HOME/myrcs/scripts/* /usr/bin/
-
+./install-dependencies
 #TODO 
 # mkdir -p ~/.local/bin
 # ln -s /usr/bin/batcat ~/.local/bin/bat

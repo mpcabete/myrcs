@@ -3,7 +3,3 @@ exa
 git
 neofetch
 command-not-found
-trash-cli
-bat
-npm
-tmux
