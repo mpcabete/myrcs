@@ -11,9 +11,11 @@ fi
 
 echo "if on ubuntu disto manually add bind-caps.sh to startup scripts"
 # print current keymap table 
+~/myrcs/scripts/bind-caps
+
 xmodmap -pke > ~/.Xmodmap;
 # append capslock bind
-cat ./xmodmap-capslock >> ~/.Xmodmap;
+#cat ./xmodmap-capslock >> ~/.Xmodmap;
 
 # update bindings
 # modmap ~/.Xmodmap
@@ -27,12 +29,16 @@ echo "source ~/myrcs/.zshrc" > ~/.zshrc
 echo "source-file ~/myrcs/.tmux.conf" > ~/.tmux.conf
 
 
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+if [ ! -d "$HOME/zsh-syntax-highlighting" ]; then
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/zsh-syntax-highlighting
+  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+else
+  echo "zsh plugins already installed."
+fi
 # set default as zsh
 chsh -s $(which zsh)
 
-./install-dependencies
+~/myrcs/scripts/install-dependencies
 #TODO 
 # mkdir -p ~/.local/bin
 # ln -s /usr/bin/batcat ~/.local/bin/bat

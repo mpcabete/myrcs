@@ -1,5 +1,5 @@
 #! /bin/bash
-for i in $(cat ../dependencies.txt) ; do
+for i in $(cat ~/myrcs/dependencies.txt) ; do
   echo "installing $i"
   sudo apt-get install $i -y
 done
