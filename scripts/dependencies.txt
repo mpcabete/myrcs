@@ -3,3 +3,5 @@ exa
 git
 neofetch
 command-not-found
+npm
+ranger
