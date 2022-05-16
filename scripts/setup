@@ -44,3 +44,4 @@ chsh -s $(which zsh)
 # ln -s /usr/bin/batcat ~/.local/bin/bat
 
 ln -s ~/myrcs/nvim .config/
+echo "nvim com linktree so funciona versao maior do q a disponivel no apt isntall"
