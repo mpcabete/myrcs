@@ -42,3 +42,5 @@ chsh -s $(which zsh)
 #TODO 
 # mkdir -p ~/.local/bin
 # ln -s /usr/bin/batcat ~/.local/bin/bat
+
+ln -s ~/myrcs/nvim .config/
