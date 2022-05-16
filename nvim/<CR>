@@ -1,0 +1,8 @@
+-- https://www.youtube.com/watch?v=ppMX4LHIuy4
+vim.bo.expandtab = true
+vim.bo.shiftwidth = 2
+vim.bo.softtabstop = 2
+
+local keymap = vim.api.nvim_set_keymap
+keymap('n', 'c-s', ':w<CR>',{})
+
