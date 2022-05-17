@@ -10,6 +10,17 @@ require('packer').startup(function()
        run = ':TSUpdate'
    }
 
+    use {
+            "williamboman/nvim-lsp-installer",
+            {
+            "neovim/nvim-lspconfig",
+            config = function()
+                    require("nvim-lsp-installer").setup {}
+                    local lspconfig = require("lspconfig")
+                    lspconfig.sumneko_lua.setup {}
+                end
+    }}
+
 end)
 
 require'nvim-treesitter.configs'.setup {
@@ -34,7 +45,6 @@ require'nvim-treesitter.configs'.setup {
   }
 }
 
-local function blah()
-    print "blah"
-end
+
+
 

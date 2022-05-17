@@ -43,5 +43,9 @@ chsh -s $(which zsh)
 # mkdir -p ~/.local/bin
 # ln -s /usr/bin/batcat ~/.local/bin/bat
 
+# nvim plugins
 ln -s ~/myrcs/nvim .config/
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+     ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 echo "nvim com linktree so funciona versao maior do q a disponivel no apt isntall"
+sudo npm install -g typescript typescript-language-server
