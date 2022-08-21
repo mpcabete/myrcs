@@ -1,0 +1,2 @@
+#! /bin/bash
+scp -r -i /home/mpkbt/Downloads/ssh-key-2022-07-24.key "minecraft@152.67.61.142:/home/minecraft/Desktop/Server/world" "/media/mpkbt/backup/mc-server/$(date +"%Y-%m-%d")"

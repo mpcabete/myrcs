@@ -4,7 +4,7 @@ require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   use "EdenEast/nightfox.nvim"
-  
+
   use {
        'nvim-treesitter/nvim-treesitter',
        run = ':TSUpdate'
