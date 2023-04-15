@@ -1,5 +1,20 @@
 #!/usr/bin/bash
 FILE=${1}
+TIME=$(stat -c %Y $FILE)
 
 shift
-watch -g -n 0.1 -t stat -c %Y $FILE && $@ 
+
+while true;
+do
+  LAST_TIME=$TIME
+  TIME=$(stat -c %Y $FILE)
+  MOD_TIME=$((TIME - LAST_TIME))
+
+  if [ "$MOD_TIME" -ne 0 ]
+  then
+    echo $@
+    eval "$@"
+  fi
+  # $@ 
+  sleep 0.1
+done
