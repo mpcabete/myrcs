@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+FILE=${1}
+
+shift
+watch -g -n 0.1 -t stat -c %Y $FILE && $@ 

@@ -2,4 +2,5 @@
 
 file=$(shuf -ezn 1 ~/Pictures/wallpapers/*/*.* ~/Pictures/wallpapers/*.*)
 export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
-gsettings set org.gnome.desktop.background picture-uri file:$file
+echo "New wpp: $file"
+gsettings set org.gnome.desktop.background picture-uri-dark file:$file

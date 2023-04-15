@@ -1,4 +1,5 @@
 #!/usr/bin/bash
-sleep 4
-xmodmap -e "keycode 66 = Escape"
-xmodmap -e "clear Lock"
+#sleep 4
+#xmodmap -e "keycode 66 = Escape"
+#xmodmap -e "clear Lock"
+#gsettings set org.gnome.desktop.input-sources xkb-options "['caps:swapescape']"
