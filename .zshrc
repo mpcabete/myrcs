@@ -84,6 +84,9 @@ source /etc/zsh_command_not_found
 #============== ALIASSES
 source ~/myrcs/.aliasrc
 
+#============== ENV
+source ~/myrcs/.env
+
 
 
 
