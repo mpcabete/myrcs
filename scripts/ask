@@ -1,0 +1,16 @@
+#! /bin/python3
+import openai
+import sys
+
+
+usr_input = ' '.join(sys.argv[1:])
+response = openai.ChatCompletion.create(
+    model="gpt-3.5-turbo",
+    messages=[{"role": "user", "content": usr_input}],
+    temperature=.7,
+)
+
+pricePerMilTokens = 0.002
+print(response.choices[0].message.content)
+print("%.5f Centavos"%((response.usage.total_tokens / 10 *5) * pricePerMilTokens))
+
