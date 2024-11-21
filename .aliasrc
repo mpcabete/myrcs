@@ -49,4 +49,4 @@ alias setbg="feh --bg-scale $1"
 alias castle="curl https://raw.githubusercontent.com/imsnif/terminal-anatomy-code-examples/main/raw_castle_ansi/castle"
 alias parrot="curl parrot.live"
 
-alias vim="nvim"
+alias vim="lvim"

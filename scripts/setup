@@ -11,9 +11,9 @@ fi
 
 echo "if on ubuntu disto manually add bind-caps.sh to startup scripts"
 # print current keymap table 
-~/myrcs/scripts/bind-caps
+#~/myrcs/scripts/bind-caps
 
-xmodmap -pke > ~/.Xmodmap;
+#xmodmap -pke > ~/.Xmodmap;
 # append capslock bind
 #cat ./xmodmap-capslock >> ~/.Xmodmap;
 
@@ -21,8 +21,8 @@ xmodmap -pke > ~/.Xmodmap;
 # modmap ~/.Xmodmap
 
 # install vimplug
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+#curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    #https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # zshrc
 echo "source ~/myrcs/.zshrc" > ~/.zshrc
@@ -44,8 +44,8 @@ chsh -s $(which zsh)
 # ln -s /usr/bin/batcat ~/.local/bin/bat
 
 # nvim plugins
-ln -s ~/myrcs/nvim .config/
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
-     ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-echo "nvim com linktree so funciona versao maior do q a disponivel no apt isntall"
-sudo npm install -g typescript typescript-language-server
+#ln -s ~/myrcs/nvim .config/
+#git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+     #~/.local/share/nvim/site/pack/packer/start/packer.nvim
+#echo "nvim com linktree so funciona versao maior do q a disponivel no apt isntall"
+#sudo npm install -g typescript typescript-language-server
