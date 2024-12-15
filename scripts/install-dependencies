@@ -3,3 +3,56 @@ for i in $(cat ~/myrcs/dependencies.txt) ; do
   echo "installing $i"
   sudo apt-get install $i -y
 done
+
+#lvim
+lvim -h && LV_BRANCH='release-1.4/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh)
+
+# lazygit
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | \grep -Po '"tag_name": *"v\K[^"]*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+tar xf lazygit.tar.gz lazygit
+sudo install lazygit -D -t /usr/local/bin/
+
+#fonts
+
+declare -a fonts=(
+    # BitstreamVeraSansMono
+    # CodeNewRoman
+    # DroidSansMono
+    FiraCode
+    # FiraMono
+    # Go-Mono
+    Hack
+    # Hermit
+    JetBrainsMono
+    # Meslo
+    # Noto
+    # Overpass
+    # ProggyClean
+    # RobotoMono
+    # SourceCodePro
+    # SpaceMono
+    # Ubuntu
+    # UbuntuMono
+)
+
+fonts_dir="${HOME}/.local/share/fonts"
+
+if [[ ! -d "$fonts_dir" ]]; then
+    mkdir -p "$fonts_dir"
+fi
+
+echo -e "\e[0;32mScript:\e[0m \e[0;34mClonning\e[0m \e[0;31mNerdFonts\e[0m \e[0;34mrepo (sparse)\e[0m"
+git clone --filter=blob:none --sparse git@github.com:ryanoasis/nerd-fonts
+cd nerd-fonts
+
+for font in "${fonts[@]}"; do
+    echo -e "\e[0;32mScript:\e[0m \e[0;34mClonning font:\e[0m \e[0;31m${font}\e[0m"
+    git sparse-checkout add "patched-fonts/${font}"
+    echo -e "\e[0;32mScript:\e[0m \e[0;34mInstalling font:\e[0m \e[0;31m${font}\e[0m"
+    ./install.sh "${font}"
+done
+
+echo -e "\e[0;32mScript:\e[0m \e[0;34mCleaning the mess...\e[0m"
+cd ../
+rm -rf nerd-fonts

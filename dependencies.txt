@@ -1,5 +1,6 @@
 zsh
 exa
+eza
 git
 neofetch
 command-not-found
@@ -8,3 +9,6 @@ bat
 npm
 tmux
 ranger
+neovim
+kitty
+lazygit

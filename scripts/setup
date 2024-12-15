@@ -9,7 +9,7 @@ then
 
 fi
 
-echo "if on ubuntu disto manually add bind-caps.sh to startup scripts"
+# echo "if on ubuntu disto manually add bind-caps.sh to startup scripts"
 # print current keymap table 
 #~/myrcs/scripts/bind-caps
 
@@ -27,6 +27,7 @@ echo "if on ubuntu disto manually add bind-caps.sh to startup scripts"
 # zshrc
 echo "source ~/myrcs/.zshrc" > ~/.zshrc
 echo "source-file ~/myrcs/.tmux.conf" > ~/.tmux.conf
+echo "source ~/myrcs/kitty.conf" : ~/.config/kitty/kitty.conf
 
 
 if [ ! -d "$HOME/zsh-syntax-highlighting" ]; then

@@ -8,6 +8,7 @@ precmd() {
 }
 
 export PATH=$PATH:$HOME/myrcs/scripts
+export PATH=/home/mateus/.local/bin:$PATH
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _complete _ignored _approximate
