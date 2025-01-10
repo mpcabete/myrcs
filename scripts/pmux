@@ -3,20 +3,34 @@
 # Name of the tmux session
 SESSION_NAME="my_session"
 
-# Start a new tmux session named 'my_session'
-tmux new-session -d -s $SESSION_NAME
+# Get the base name of the current directory
+DIR_NAME=$(basename "$PWD")
+
+# Check if the session already exists
+tmux has-session -t $SESSION_NAME 2>/dev/null
+
+if [ $? != 0 ]; then
+  # Session does not exist, create a new one
+  tmux new-session -d -s $SESSION_NAME -n $DIR_NAME
+else
+  # Session exists, create a new window in the existing session and name it
+  tmux new-window -t $SESSION_NAME -n $DIR_NAME
+fi
+
+# Get the current window index
+CURRENT_WINDOW=$(tmux display-message -p '#I')
 
 # Split the window vertically
-tmux split-window -h
+tmux split-window -h -t $SESSION_NAME:$CURRENT_WINDOW
 
 # In the first pane, run 'source venv/bin/activate'
-tmux send-keys -t $SESSION_NAME:0.0 'source venv/bin/activate' C-m
+tmux send-keys -t $SESSION_NAME:$CURRENT_WINDOW.0 'source venv/bin/activate' C-m
 
 # In the second pane, run 'source venv/bin/activate'
-tmux send-keys -t $SESSION_NAME:0.1 'source venv/bin/activate' C-m
-
-# Attach to the session
-tmux attach -t $SESSION_NAME
+tmux send-keys -t $SESSION_NAME:$CURRENT_WINDOW.1 'source venv/bin/activate' C-m
 
 # Select the first pane to keep the focus there
-tmux select-pane -t $SESSION_NAME:0.0
+tmux select-pane -t $SESSION_NAME:$CURRENT_WINDOW.0
+
+# Attach to the session (stay in the session to observe changes)
+tmux attach -t $SESSION_NAME
